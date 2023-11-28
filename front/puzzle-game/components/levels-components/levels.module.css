@@ -1,0 +1,6 @@
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: space-between; /* Distribuye las tarjetas equitativamente en la fila */
+  }

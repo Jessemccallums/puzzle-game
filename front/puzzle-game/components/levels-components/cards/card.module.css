@@ -1,0 +1,7 @@
+.boxcard{
+    width: calc(25% - 20px); /* Ancho de cada tarjeta (25% para 4 tarjetas por fila, con 20px de espacio entre ellas) */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
