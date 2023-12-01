@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 .hometitle{
     text-align: center;
     padding-top: 100px;
@@ -9,13 +12,22 @@
     align-items: center;
 }
 
-.link{
+.link {
     text-align: center;
-    padding: 10px 55px 10px 55px;
-    background-color: #6DB9EF;
-    border-radius: 6px;
-    margin-top: 16px;
+    padding: 18px 73px 20px 68px;
+    background-color: #FEC048;
+    border-radius: 50px;
+    margin-top: -5.5rem;
+    z-index: 200;
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    transition: font-size 0.3s ease; /* Add this line */
 }
+
+.link:hover {
+    font-size: 22px;
+}
+
 
 .p{
     font-size: 20px;
@@ -24,4 +36,22 @@
     width: 50%;
     text-align: center;
     margin-top: 45px;
+}
+
+.image{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 56px;
+    position: relative;
+    z-index: 100;
+    margin-top: 5rem;
+}
+
+.welcoming{
+    margin-top: 8rem;
+    z-index: 300;
+    position: absolute;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
 }

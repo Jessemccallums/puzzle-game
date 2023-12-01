@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './card.module.css';
 import Link from 'next/link';
+import Completed from './Completed';
 
 export default function Card({ id, level }) {
   const [completed, setCompleted] = useState(false);
@@ -30,12 +31,11 @@ export default function Card({ id, level }) {
 
   return (
     <div className={styles.boxcard}>
-      <h2>{id}</h2>
-      <h2>{level}</h2>
+      <h2 className={styles.level}> Play level {level}</h2>
       <Link href={`levels/${id}`} className={styles.joinbtn}>
         Join
       </Link>
-      {completed && <h2>Completed</h2>}
+      <Completed  completed={completed}/>
     </div>
   );
 }

@@ -21,7 +21,6 @@ export default function Detail() {
 
   return (
     <div className={styles.bghome}>
-      <h1 className={styles.title}>hola</h1>
       <GameView id={lastSegment} />
     </div>
   );
