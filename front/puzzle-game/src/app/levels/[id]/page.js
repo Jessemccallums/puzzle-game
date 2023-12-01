@@ -1,11 +1,15 @@
-import Image from 'next/image'
-import styles from './levels.module.css'
-import GameView from '../../../../components/levels-components/GameView'
+
+import Image from 'next/image';
+import styles from './levels.module.css';
+import Detail from '../../../../components/detail-in-game/Detail'
 
 export default function Home() {
+  
+  
+
   return (
-    <div className={styles.bghome}>
-      <GameView />
+    <div className={styles.bghomedetail}>
+      <Detail />
     </div>
-  )
+  );
 }

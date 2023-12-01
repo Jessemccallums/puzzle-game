@@ -1,10 +1,10 @@
 import './App.css';
 import Board from './components/board/Board'
 
-const App = () => {
+const App = ({id}) => {
     return (
         <div className="App">
-            <Board />
+            <Board id={id} />
         </div>
     );
 }
