@@ -1,6 +1,6 @@
 .boxcard{
     width: calc(25% - 20px);
-    background-color: #ecf4ee;
+    background-image: url('../../../../../front/puzzle-game/public/skybg.svg');
     padding: 35px;
     box-sizing: border-box;
     display: flex;
