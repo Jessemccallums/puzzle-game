@@ -34,6 +34,7 @@ export default function LevelsView() {
       ]
   return (
     <div className={styles.cardcontainer}>
+        <h1 className={styles.welcome}>Play a puzzle game!</h1>
         {
             cards.map(card => (
                 <Card id={card.id} level={card.name}  />

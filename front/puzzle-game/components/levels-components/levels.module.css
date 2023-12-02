@@ -7,3 +7,10 @@
   z-index: 200; /* Distribuye las tarjetas equitativamente en la fila */
   padding: 150px;
   }
+
+  .welcome{
+    position: absolute;
+    top: 50px;
+    left: 39%;
+    font-family: 'Lexend', sans-serif;
+  }

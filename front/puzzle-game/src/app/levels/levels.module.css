@@ -1,7 +1,4 @@
 .bghome{
-    background-color: #FFF6C2;
-    width: 100%;
-    height: 100vw;
 }
 
 .bghomedetail{
@@ -13,5 +10,29 @@
     z-index: 100;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 101rem;
+    top: -120px;
+}
+
+.bg{
+
+}
+
+.imagebackgound1{
+    
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 114rem;
+    top: -120px;
+    right: -33rem;
+}
+
+.imagebackgound2{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 114rem;
+    top: 0px;
+    right: 24rem;
 }

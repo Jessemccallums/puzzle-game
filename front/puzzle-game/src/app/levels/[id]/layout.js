@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{metadata.title}</title>
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/planehome1.svg" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
       </head>
       <body className={inter.className}>

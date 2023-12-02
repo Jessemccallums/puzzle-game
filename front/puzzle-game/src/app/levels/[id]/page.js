@@ -9,9 +9,6 @@ export default function Home() {
 
   return (
     <div className={styles.bghomedetail}>
-      <head>
-        <title>Puzzle Game</title>
-      </head>
       <Detail />
     </div>
   );

@@ -1,6 +1,6 @@
 .boxcard{
     width: calc(25% - 20px);
-    background-color: #fde3ca;
+    background-color: #ecf4ee;
     padding: 35px;
     box-sizing: border-box;
     display: flex;
@@ -14,15 +14,18 @@
 
 .joinbtn{
     padding: 10px;
-    background-color: #FFF1EA;
+    background-color: #c0d4c4;
     width: 100%;
     border-radius: 22px;
     text-align: center;
     font-family: 'Lexend', sans-serif;
     font-size: 15px;
     border: 2px solid black;
+    transition: font-size 0.3s ease;
 }
-
+.joinbtn:hover{
+    font-size: 20px;
+}
 
 .level{
     text-align: center;
