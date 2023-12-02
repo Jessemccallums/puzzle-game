@@ -1,7 +1,36 @@
 .boxcard{
-    width: calc(25% - 20px); /* Ancho de cada tarjeta (25% para 4 tarjetas por fila, con 20px de espacio entre ellas) */
-    background-color: #f0f0f0;
-    padding: 20px;
+    width: calc(25% - 20px);
+    background-color: #fde3ca;
+    padding: 35px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 50px;
+    border: 6px solid black;
+    align-items: center;
 }
 
+
+.joinbtn{
+    padding: 10px;
+    background-color: #FFF1EA;
+    width: 100%;
+    border-radius: 22px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    border: 2px solid black;
+}
+
+
+.level{
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+}
+
+.completed{
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    color: #153B5E;
+}
