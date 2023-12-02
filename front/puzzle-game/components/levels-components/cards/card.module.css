@@ -1,6 +1,6 @@
 .boxcard{
     width: calc(25% - 20px);
-    background-color: #fde3ca;
+    background-color: #66D5CB;
     padding: 35px;
     box-sizing: border-box;
     display: flex;
