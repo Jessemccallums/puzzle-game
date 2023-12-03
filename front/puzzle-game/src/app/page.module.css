@@ -27,3 +27,15 @@
   object-fit: cover;
   color: transparent;
 }
+
+
+.homepage{
+  position: absolute;
+  height: 12rem;
+  width: 23rem;
+  top: 13rem;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  color: transparent;
+}

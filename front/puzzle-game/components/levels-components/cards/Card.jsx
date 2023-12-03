@@ -31,7 +31,7 @@ export default function Card({ id, level }) {
 
   return (
     <div className={styles.boxcard}>
-      <h2 className={styles.level}> Play level {level}</h2>
+      <h2 className={styles.level}> Play {level}</h2>
       <Link href={`levels/${id}`} className={styles.joinbtn}>
         Join
       </Link>
