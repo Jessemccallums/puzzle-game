@@ -49,9 +49,12 @@
 }
 
 .welcoming{
-    margin-top: 8rem;
+    color: #f8ebf5;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
     z-index: 300;
     position: absolute;
     text-align: center;
     font-family: 'Lexend', sans-serif;
+    font-size: 76px;
 }

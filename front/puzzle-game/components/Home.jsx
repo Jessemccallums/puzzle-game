@@ -14,9 +14,9 @@ export default function Init() {
       className={styles.image}
       /> */}
       <h1 className={styles.welcoming}>
-        Welcome <br />
-        to <br />
-        Puzzle Game
+        Numbers <br />
+        Puzzle <br />
+        Game
       </h1>
         
         <Link href="/levels" className={styles.link}>
