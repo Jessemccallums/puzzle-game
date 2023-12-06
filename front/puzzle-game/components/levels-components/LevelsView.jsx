@@ -1,5 +1,4 @@
 import React from 'react'
-import App from '../../components/appcomponents/src/App'
 import Link from 'next/link'
 import Card from './cards/Card'
 import styles from './levels.module.css'
@@ -18,19 +17,6 @@ export default function LevelsView() {
         { id: 10, name: 'Level 10', src: '/images/level10.png' },
         { id: 11, name: 'Level 11', src: '/images/level11.png' },
         { id: 12, name: 'Level 12', src: '/images/level12.png' },
-        { id: 13, name: 'Level 13', src: '/images/level13.png' },
-        { id: 14, name: 'Level 14', src: '/images/level14.png' },
-        { id: 15, name: 'Level 15', src: '/images/level15.png' },
-        { id: 16, name: 'Level 16', src: '/images/level16.png' },
-        { id: 17, name: 'Level 17', src: '/images/level17.png' },
-        { id: 18, name: 'Level 18', src: '/images/level18.png' },
-        { id: 19, name: 'Level 19', src: '/images/level19.png' },
-        { id: 20, name: 'Level 20', src: '/images/level20.png' },
-        { id: 21, name: 'Level 21', src: '/images/level20.png' },
-        { id: 22, name: 'Level 22', src: '/images/level20.png' },
-        { id: 23, name: 'Level 23', src: '/images/level20.png' },
-        { id: 24, name: 'Level 24', src: '/images/level20.png' },
-        { id: 25, name: 'Level 25', src: '/images/level20.png' },
       ]
   return (
     <div className={styles.cardcontainer}>
