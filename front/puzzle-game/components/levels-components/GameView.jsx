@@ -12,6 +12,9 @@ import App10 from '../../components/levels/level10/src/App'
 import App11 from '../../components/levels/level11/src/App'
 import App12 from '../../components/levels/level12/src/App'
 import { useState, useEffect } from 'react';
+import Link from 'next/link'
+import styles from './levels.module.css'
+import { IoMdReturnLeft } from "react-icons/io";
 
 export default function GameView({id}) {
   const [completed, setCompleted] = useState(false);
@@ -34,6 +37,11 @@ export default function GameView({id}) {
   }, [id]);
   return (
     <div>
+      <div className={styles.levellink}>
+        <Link href="/levels">
+          <IoMdReturnLeft  className={styles.linkback} /> 
+        </Link>        
+      </div>
       {id == 1 && <App1 id={id} />}
       {id == 2 && <App2 id={id} />}
       {id == 3 && <App3 id={id} />}

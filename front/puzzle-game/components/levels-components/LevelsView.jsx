@@ -20,8 +20,10 @@ export default function LevelsView() {
       ]
   return (
     <div className={styles.cardcontainer}>
-        <h1 className={styles.welcome}>Play a puzzle game!</h1>
-        <h2 className={styles.welcome1}>Arrange the numbers in ascending order to advance to next level</h2>
+        <div className={styles.boxtitles}>
+            <h1 className={styles.welcome}>Play a number puzzle game!</h1>
+            <h2 className={styles.welcome1}>Arrange the numbers in ascending order to advance to next level</h2>
+        </div>
         {
             cards.map(card => (
                 <Card id={card.id} level={card.name}  />
