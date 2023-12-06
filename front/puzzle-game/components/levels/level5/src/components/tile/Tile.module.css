@@ -16,21 +16,20 @@
   background: red;
 }
 
-/* Add additional CSS for positioning each tile in the 2x2 grid */
-.number.slot--0 { left: 0; top: 0; }
-.number.slot--1 { left: 100px; top: 0; }
-.number.slot--2 { left: calc(2 * 100px); top: 0; }
-.number.slot--3 { left: 0; top: 100px; }
-.number.slot--4 { left: 100px; top: 100px; }
-.number.slot--5 { left: calc(2 * 100px); top: 100px; }
-.number.slot--6 { left: 0; top: calc(2 * 100px); }
-.number.slot--7 { left: 100px; top: calc(2 * 100px); }
-.number.slot--8 { left: calc(2 * 100px); top: calc(2 * 100px); }
-
+.number.slot--0{left: 0px; top: 0;}
+.number.slot--1{left: 100px; top: 0;}
+.number.slot--2{left: calc(2 * 100px); top: 0;}
+.number.slot--3{left: calc(3 * 100px); top: 0;}
+.number.slot--4{left: 0; top: calc(100px);}
+.number.slot--5{left: 100px; top: 100px;}
+.number.slot--6{left: calc(2 * 100px ); top: 100px;}
+.number.slot--7{left: calc(3 * 100px); top: 100px;}
+.number.slot--8{left: 0; top: calc(2 * 100px );}
+.number.slot--9{left: 100px; top: calc(2 * 100px );}
+.number.slot--10{left: calc(2 * 100px ); top: calc(2 * 100px );}
+.number.slot--11{left: calc(3 * 100px); top: calc(2 * 100px );}
+.number.slot--12{left: 0; top: calc(3 * 100px);}
+.number.slot--13{left: 100px; top: calc(3 * 100px);}
+.number.slot--14{left: calc(2 * 100px ); top: calc(3 * 100px);}
+.number.slot--15{left: calc(3 * 100px); top: calc(3 * 100px);}
 .number.disabled{pointer-events: none; background-color:transparent;}
-
-
-.number.empty {
-  pointer-events: none; 
-  background-color: transparent;
-}

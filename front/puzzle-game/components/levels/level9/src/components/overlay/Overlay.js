@@ -1,9 +1,8 @@
-import styles from './Overlay.module.css'
+import styles from './Overlay.module.css';
 
-const Overlay = ({size}) =>
+const Overlay = ({ size }) =>
     new Array(size)
         .fill()
-        .map((_,i) => <div key={i} className={styles.overlay}/>)
+        .map((_, i) => <div key={i} className={styles.overlay} />);
 
-export default Overlay
-
+export default Overlay;
