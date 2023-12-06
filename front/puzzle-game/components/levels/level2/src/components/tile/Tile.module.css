@@ -27,6 +27,8 @@
 .number.slot--7 { left: 100px; top: calc(2 * 100px); }
 .number.slot--8 { left: calc(2 * 100px); top: calc(2 * 100px); }
 
+.number.disabled{pointer-events: none; background-color:transparent;}
+
 
 .number.empty {
   pointer-events: none; 
