@@ -1,5 +1,5 @@
 import NewGame from '../new-game/NewGame';
-import './Winner.css';
+import styles from './Winner.module.css';
 import Link from 'next/link';
 
 const Winner = ({ numbers, reset, id }) => {
@@ -19,21 +19,32 @@ const Winner = ({ numbers, reset, id }) => {
         localStorage.setItem(`progress_${id}`, JSON.stringify(progressData));
         console.log('Progress saved to localStorage!');
     };
-
+    
+    const styling = {
+        position: 'absolute',
+        background: '#123355',
+        borderRadius: '10px',
+        top: '0',
+        zIndex: '100',
+        left: '0',
+        bottom: '0',
+        right: '0',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        color: 'white',
+    };
 
     return (
-        <div className="winner">
+        <div style={styling} className={styles.winner}>
             <p>You win!</p>
             <h2>Level {numericId} completed!</h2>
             
             {numericId === 25 ? 'You have completed all levels!' : 
-            <button onClick={saveProgress}>
-            Save Progress
-            <br />
-            <Link href={`/levels/${nextLevelId}`}>
+            <Link onClick={saveProgress} href={`/levels/${nextLevelId}`}>
                 Link to next level
             </Link>
-            </button>
             }
         </div>
     );

@@ -1,6 +1,6 @@
 .winner{
   position: absolute;
-  background: var(--tile);
+  background: #123355;
   border-radius: 10px;
   top: 0;
   z-index: 100;

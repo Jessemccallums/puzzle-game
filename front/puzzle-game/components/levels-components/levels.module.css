@@ -4,8 +4,9 @@
   gap: 20px;
   justify-content: space-between;
   position: absolute;
-  z-index: 200; /* Distribuye las tarjetas equitativamente en la fila */
+  z-index: 200;
   padding: 150px;
+  top: 0;
   }
 
   .welcome{
@@ -35,7 +36,7 @@
     z-index: 300;
     width: 100%;
     text-align: center;
-    top: 33.5rem;
+    top: 90%;
     left: 0rem;
   }
 

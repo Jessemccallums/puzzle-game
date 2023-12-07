@@ -6,12 +6,10 @@
 }
 
 .imagebackgound{
-    
+    position: relative;
+    width: 100%;
+    height: 100%;
     z-index: 100;
-    position: fixed;
-    width: 129rem;
-    height: 101rem;
-    top: -120px;
 }
 
 .bg{
