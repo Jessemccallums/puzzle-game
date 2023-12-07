@@ -10,7 +10,7 @@ const Board = () => {
         new Array(16)
         .fill()
         .map((_,i) => i+1)
-        //.sort(() => Math.random() -.5)
+        .sort(() => Math.random() -.5)
         .map((x,i) => ({value : x , index : i}))
 
     const [numbers,setNumbers] = useState([])
