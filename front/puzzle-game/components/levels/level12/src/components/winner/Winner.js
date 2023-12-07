@@ -10,12 +10,12 @@ const Winner = ({ numbers, reset, id }) => {
 
     const saveProgress = () => {
         const progressData = {
-            id: id,
+            id: 12,
             progress: numbers, // Assuming 'numbers' holds the progress data
             lastSaved: new Date().toISOString()
         };
 
-        localStorage.setItem(`progress_${id}`, JSON.stringify(progressData));
+        localStorage.setItem(`progress_12`, JSON.stringify(progressData));
         console.log('Progress saved to localStorage!');
     };
     
@@ -41,12 +41,12 @@ const Winner = ({ numbers, reset, id }) => {
         <div style={styling} >
             <p>You win!</p>
             <h2>Level 12 completed!</h2>
-            
-            {numericId === 25 ? 'You have completed all levels!' : 
-            <Link onClick={saveProgress} href={`/levels/${nextLevelId}`}>
-                Link to next level
-            </Link>
-            }
+            <h2>
+                You have completed all levels! 
+            </h2>   
+            <button onClick={saveProgress}>
+                Save progress
+            </button>
         </div>
     );
 };

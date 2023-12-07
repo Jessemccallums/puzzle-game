@@ -1,5 +1,4 @@
 import NewGame from '../new-game/NewGame';
-import styles from './Winner.module.css';
 import Link from 'next/link';
 
 const Winner = ({ numbers, reset, id }) => {
@@ -37,7 +36,7 @@ const Winner = ({ numbers, reset, id }) => {
     };
 
     return (
-        <div style={styling} className={styles.winner}>
+        <div style={styling} >
             <p>You win!</p>
             <h2>Level {numericId} completed!</h2>
             
