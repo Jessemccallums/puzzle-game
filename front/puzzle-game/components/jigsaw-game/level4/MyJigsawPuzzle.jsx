@@ -4,7 +4,7 @@ import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
 import Image from 'next/image';
 import styles from './levelone.module.css';
 
-const MyJigsawPuzzle = () => {
+const MyJigsawPuzzle4 = () => {
   const [completedImage, setCompletedImage] = useState(null);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [timer, setTimer] = useState(0);
@@ -64,8 +64,8 @@ const MyJigsawPuzzle = () => {
       <div className={styles.puzzlegame}>
         <JigsawPuzzle
           imageSrc={getImageSrc()}
-          rows={2}
-          columns={3}
+          rows={8}
+          columns={7}
           onSolved={handleSolved}
         />
       </div>
@@ -92,4 +92,4 @@ const MyJigsawPuzzle = () => {
   );
 };
 
-export default MyJigsawPuzzle;
+export default MyJigsawPuzzle4;

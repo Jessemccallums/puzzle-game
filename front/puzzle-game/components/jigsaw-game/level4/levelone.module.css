@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.puzzlegame{
+
+}
+
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    gap: 29px;
+    font-family: 'Lexend', sans-serif;
+
+}
+
+.btnsimgs{
+    background: none;
+    padding: 25px;
+    border-radius: 67px;
+
+}
+
+.imgbtns{
+    width: 7rem;
+}
+
+.titles{
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+}
+
+.btnreset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lexend', sans-serif;   
+}
+
+.progressbtn{
+    font-family: 'Lexend', sans-serif;
+    padding: 10px;
+    border-radius: 14px;
+    background: none;
+    margin-top: 25px;
+}
