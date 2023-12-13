@@ -7,6 +7,8 @@ import MyJigsawPuzzle2 from '../level2/MyJigsawPuzzle'
 import MyJigsawPuzzle3 from '../level3/MyJigsawPuzzle'
 import MyJigsawPuzzle4 from '../level4/MyJigsawPuzzle'
 import styles from './detail.module.css'
+import { IoMdReturnLeft } from 'react-icons/io'
+import Link from 'next/link'
 
 
 export default function Detail() {
@@ -20,6 +22,11 @@ export default function Detail() {
     console.log('Last segment of the pathname:', lastSegment);
   return (
     <div className={styles.detail}>
+       <div className={styles.icon}>
+            <Link href="/jigsaw-game">
+                <IoMdReturnLeft  className={styles.linkback} /> 
+            </Link>  
+        </div>
       {
         lastSegment == 1 && <MyJigsawPuzzle1 />
       }
