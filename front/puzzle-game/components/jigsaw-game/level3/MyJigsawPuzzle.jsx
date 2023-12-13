@@ -9,6 +9,7 @@ const MyJigsawPuzzle = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
   const [timer, setTimer] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isTimerPaused, setIsTimerPaused] = useState(false); // Track pause/resume state
 
   const handleChoose = (number) => {
     setCurrentLevel(number);
@@ -29,6 +30,10 @@ const MyJigsawPuzzle = () => {
     setSelectedImage(null); // Reset selected image URL
   };
 
+  const toggleTimer = () => {
+    setIsTimerPaused(!isTimerPaused); // Toggle pause/resume
+  };
+
   const getImageSrc = () => {
     return `/level-1-pictures/${currentLevel}.svg`;
   };
@@ -46,11 +51,13 @@ const MyJigsawPuzzle = () => {
 
     // Start the timer
     const interval = setInterval(() => {
-      setTimer((prevTimer) => prevTimer + 1);
+      if (!isTimerPaused) {
+        setTimer((prevTimer) => prevTimer + 1);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isTimerPaused]);
 
   return (
     <div>
@@ -60,7 +67,10 @@ const MyJigsawPuzzle = () => {
         <div className={styles.titles}>Current Level: {currentLevel}</div>
         <div className={styles.titles}>Timer: {timer} seconds</div>
         <div className={styles.btnreset}>
-            <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+          <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+          <button className={styles.progressbtn} onClick={toggleTimer}>
+            {isTimerPaused ? 'Resume Timer' : 'Pause Timer'}
+          </button>
         </div>
       </div>
       <div className={styles.puzzlegame}>
