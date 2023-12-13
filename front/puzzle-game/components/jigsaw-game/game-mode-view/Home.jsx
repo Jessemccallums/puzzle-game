@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <div className={styles.home}>
         <h1 className={styles.headline}>Play a Puzzle Game</h1>
-        <Image  src="/GamePage3.svg" className={styles.bg} layout="fill" objectFit="cover" />
+        <Image  src="/level-1-pictures/jigsawbg.svg" className={styles.bg} layout="fill" objectFit="cover" />
+        <Image  src="/skybg.svg" className={styles.bg1} layout="fill" objectFit="cover" />
         <Cards />
     </div>
   )

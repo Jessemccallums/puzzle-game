@@ -6,7 +6,8 @@ import Image from 'next/image'
 export default function Page() {
   return (
     <div> 
-       <Image src="/ranchbg.svg" className={styles.homepage} alt="bg" layout="fill" objectFit="cover" /> 
+       <Image src="/level-1-pictures/17.svg" className={styles.homepage} alt="bg" layout="fill" objectFit="cover" /> 
+      {/* // 6, 8, 9, 16 */}
       <Home />
     </div>
   )

@@ -4,7 +4,7 @@ import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
 import Image from 'next/image';
 import styles from './levelone.module.css';
 
-const MyJigsawPuzzle2 = () => {
+const MyJigsawPuzzle = () => {
   const [completedImage, setCompletedImage] = useState(null);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [timer, setTimer] = useState(0);
@@ -54,18 +54,20 @@ const MyJigsawPuzzle2 = () => {
 
   return (
     <div>
-      <h1 className={styles.titles}>Jigsaw Puzzle</h1>
-      {completedImage && <div className={styles.titles}>Completed Picture: {completedImage}</div>}
-      <div className={styles.titles}>Current Level: {currentLevel}</div>
-      <div className={styles.titles}>Timer: {timer} seconds</div>
-      <div className={styles.btnreset}>
-          <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+      <div className={styles.boxtitles}>
+        <h1 className={styles.titles}>Jigsaw Puzzle</h1>
+        {completedImage && <div className={styles.titles}>Completed Picture: {completedImage}</div>}
+        <div className={styles.titles}>Current Level: {currentLevel}</div>
+        <div className={styles.titles}>Timer: {timer} seconds</div>
+        <div className={styles.btnreset}>
+            <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+        </div>
       </div>
       <div className={styles.puzzlegame}>
         <JigsawPuzzle
           imageSrc={getImageSrc()}
-          rows={4}
-          columns={3}
+          rows={3}
+          columns={4}
           onSolved={handleSolved}
         />
       </div>
@@ -79,6 +81,9 @@ const MyJigsawPuzzle2 = () => {
               backgroundImage: `url(${`/level-1-pictures/${index + 1}.svg`})`,
             }}
           >
+            <h2 className={styles.titles}>
+              {index + 1}
+            </h2>
             <Image
               src={`/level-1-pictures/${index + 1}.svg`}
               width={200}
@@ -92,4 +97,4 @@ const MyJigsawPuzzle2 = () => {
   );
 };
 
-export default MyJigsawPuzzle2;
+export default MyJigsawPuzzle;

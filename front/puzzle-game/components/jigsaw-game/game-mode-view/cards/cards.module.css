@@ -8,12 +8,14 @@
     gap: 161px;
     z-index: 300;
     padding: 150px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .card2 {
-    height: 40%;
+    height: 22rem;
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
     background-image: url('/ranchbg.svg'); /* Updated path */

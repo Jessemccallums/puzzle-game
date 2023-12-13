@@ -54,12 +54,14 @@ const MyJigsawPuzzle = () => {
 
   return (
     <div>
-      <h1 className={styles.titles}>Jigsaw Puzzle</h1>
-      {completedImage && <div className={styles.titles}>Completed Picture: {completedImage}</div>}
-      <div className={styles.titles}>Current Level: {currentLevel}</div>
-      <div className={styles.titles}>Timer: {timer} seconds</div>
-      <div className={styles.btnreset}>
-          <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+      <div className={styles.boxtitles}>
+        <h1 className={styles.titles}>Jigsaw Puzzle</h1>
+        {completedImage && <div className={styles.titles}>Completed Picture: {completedImage}</div>}
+        <div className={styles.titles}>Current Level: {currentLevel}</div>
+        <div className={styles.titles}>Timer: {timer} seconds</div>
+        <div className={styles.btnreset}>
+            <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
+        </div>
       </div>
       <div className={styles.puzzlegame}>
         <JigsawPuzzle
@@ -79,6 +81,9 @@ const MyJigsawPuzzle = () => {
               backgroundImage: `url(${`/level-1-pictures/${index + 1}.svg`})`,
             }}
           >
+            <h2 className={styles.titles}>
+              {index + 1}
+            </h2>
             <Image
               src={`/level-1-pictures/${index + 1}.svg`}
               width={200}

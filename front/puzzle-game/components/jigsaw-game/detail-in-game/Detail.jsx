@@ -6,6 +6,7 @@ import MyJigsawPuzzle1 from '../level1/MyJigsawPuzzle'
 import MyJigsawPuzzle2 from '../level2/MyJigsawPuzzle'
 import MyJigsawPuzzle3 from '../level3/MyJigsawPuzzle'
 import MyJigsawPuzzle4 from '../level4/MyJigsawPuzzle'
+import styles from './detail.module.css'
 
 
 export default function Detail() {
@@ -18,7 +19,7 @@ export default function Detail() {
     // Now lastSegment should contain the value you want
     console.log('Last segment of the pathname:', lastSegment);
   return (
-    <div>
+    <div className={styles.detail}>
       {
         lastSegment == 1 && <MyJigsawPuzzle1 />
       }

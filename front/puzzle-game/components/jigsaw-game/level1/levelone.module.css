@@ -2,6 +2,7 @@
 
 
 .puzzlegame{
+    margin-top: 70px;
 
 }
 
@@ -45,4 +46,8 @@
     border-radius: 14px;
     background: none;
     margin-top: 25px;
+}
+
+.boxtitles{
+    padding-top: 45px;
 }
