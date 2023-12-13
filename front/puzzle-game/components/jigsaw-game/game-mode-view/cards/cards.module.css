@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.card1{
+    display: flex;
+    position: fixed;
+    top: 90px;
+    gap: 161px;
+    z-index: 300;
+    padding: 150px;
+}
+
+.card2 {
+    height: 40%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('/ranchbg.svg'); /* Updated path */
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 6px solid black;
+    gap: 35px;
+}
+
+
+.h1{
+    height: 40%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+
+}
+
+.h3{
+    font-family: 'Lexend', sans-serif;
+
+}
+
+.link{
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    width: 100%;
+    text-align: center;
+    border-radius: 22px;
+    background-color: #fcfcfd;
+    transition: font-size 0.3s ease;
+}
+.link:hover{
+    font-size: 20px;
+}

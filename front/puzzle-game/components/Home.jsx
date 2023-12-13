@@ -14,12 +14,11 @@ export default function Init() {
       className={styles.image}
       /> */}
       <h1 className={styles.welcoming}>
-        Numbers <br />
         Puzzle <br />
         Game
       </h1>
         
-        <Link href="/levels" className={styles.link}>
+        <Link href="/gamemode" className={styles.link}>
           Start
         </Link>
     </div>
