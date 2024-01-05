@@ -12,7 +12,7 @@
 .puzzle {
   display: grid;
   grid-template-columns: repeat(4, 94px);
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 
@@ -229,4 +229,16 @@
 .spot_11{
   width: 100px;
   height: 100px;
+}
+
+
+
+.title{
+  position: relative;
+  top: 53px;
+}
+
+.image{
+  position: relative;
+  left: -71px;
 }

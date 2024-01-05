@@ -11,7 +11,7 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className={styles.App}>
-        <h1>Puzzle Game</h1>
+        <h1 className={styles.title}>Puzzle Game</h1>
         <Puzzle pieces={puzzlePieces} />
       </div>
     </DndProvider>
