@@ -1,108 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { JigsawPuzzle } from 'react-jigsaw-puzzle';
-import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
 import Image from 'next/image';
-import styles from './levelone.module.css';
+import App1 from './image1/App';
+import App2 from './image2/App';
+import App3 from './image3/App';
+import App4 from './image4/App';
+import App5 from './image5/App';
+import App6 from './image6/App';
+import App7 from './image7/App';
+import App8 from './image8/App';
+import App9 from './image9/App';
+import App10 from './image10/App';
+import styles from './levelone.module.css'
 
 const MyJigsawPuzzle = () => {
-  const [completedImage, setCompletedImage] = useState(null);
-  const [currentLevel, setCurrentLevel] = useState(1);
-  const [timer, setTimer] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isTimerPaused, setIsTimerPaused] = useState(false); // Track pause/resume state
-
-  const handleChoose = (number) => {
-    setCurrentLevel(number);
-    setSelectedImage(`/level-1-pictures/${number}.svg`); // Update selected image URL
-  };
-
-  const handleSolved = () => {
-    setCompletedImage(currentLevel);
-    localStorage.setItem('puzzleProgress', JSON.stringify({ completedImage, currentLevel, timer }));
-    alert('Puzzle Solved!');
-  };
-
-  const handleReset = () => {
-    localStorage.removeItem('puzzleProgress');
-    setCompletedImage(null);
-    setCurrentLevel(1);
-    setTimer(0);
-    setSelectedImage(null); // Reset selected image URL
-  };
-
-  const toggleTimer = () => {
-    setIsTimerPaused(!isTimerPaused); // Toggle pause/resume
-  };
-
-  const getImageSrc = () => {
-    return `/level-1-pictures/${currentLevel}.svg`;
-  };
-
-  useEffect(() => {
-    // Restore progress from local storage when the component mounts
-    const savedProgress = localStorage.getItem('puzzleProgress');
-
-    if (savedProgress) {
-      const { completedImage: savedCompletedImage, currentLevel: savedCurrentLevel, timer: savedTimer } = JSON.parse(savedProgress);
-      setCompletedImage(savedCompletedImage);
-      setCurrentLevel(savedCurrentLevel);
-      setTimer(savedTimer);
-    }
-
-    // Start the timer
-    const interval = setInterval(() => {
-      if (!isTimerPaused) {
-        setTimer((prevTimer) => prevTimer + 1);
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [isTimerPaused]);
+  const [image, setImage] = useState(App1);
+ 
+  const handleImage = (picture) => {
+    setImage(picture);
+  }
 
   return (
     <div>
-      <div className={styles.boxtitles}>
-        <h1 className={styles.titles}>Jigsaw Puzzle</h1>
-        {completedImage && <div className={styles.titles}>Completed Picture: {completedImage}</div>}
-        <div className={styles.titles}>Current Level: {currentLevel}</div>
-        <div className={styles.titles}>Timer: {timer} seconds</div>
-        <div className={styles.btnreset}>
-          <button className={styles.progressbtn} onClick={handleReset}>Reset Progress</button>
-          <button className={styles.progressbtn} onClick={toggleTimer}>
-            {isTimerPaused ? 'Resume Timer' : 'Pause Timer'}
-          </button>
-        </div>
+      <div className={styles.pictures}>  
+        <button className={styles.btn1_level2} onClick={() => handleImage(App1)}>1</button>
+        <button className={styles.btn2_level2} onClick={() => handleImage(App2)}>2</button>
+        <button className={styles.btn3_level2} onClick={() => handleImage(App3)}>3</button>
+        <button className={styles.btn4_level2} onClick={() => handleImage(App4)}>4</button>
+        <button className={styles.btn5_level2} onClick={() => handleImage(App5)}>5</button>
+        <button className={styles.btn6_level2} onClick={() => handleImage(App6)}>6</button>
+        <button className={styles.btn7_level2} onClick={() => handleImage(App7)}>7</button>
+        <button className={styles.btn8_level2} onClick={() => handleImage(App8)}>8</button>
+        <button className={styles.btn9_level2} onClick={() => handleImage(App9)}>9</button>
+        <button className={styles.btn10_level2} onClick={() => handleImage(App10)}>10</button>
       </div>
-      <div className={styles.puzzlegame}>
-        <JigsawPuzzle
-          imageSrc={getImageSrc()}
-          rows={3}
-          columns={4}
-          onSolved={handleSolved}
-        />
-      </div>
-      <div className={styles.btns}>
-        {Array.from({ length: 15 }, (_, index) => (
-          <button
-            className={styles.btnsimgs}
-            key={index}
-            onClick={() => handleChoose(index + 1)}
-            style={{
-              backgroundImage: `url(${`/level-1-pictures/${index + 1}.svg`})`,
-            }}
-          >
-            <h2 className={styles.titles}>
-              {index + 1}
-            </h2>
-            <Image
-              src={`/level-1-pictures/${index + 1}.svg`}
-              width={200}
-              height={200}
-              className={styles.imgbtns}
-            />
-          </button>
-        ))}
-      </div>
+    {image}
     </div>
   );
 };
