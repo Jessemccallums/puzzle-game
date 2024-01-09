@@ -1,0 +1,248 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(4, 94px);
+  margin-top: 60px;
+}
+
+
+
+.piece_0 {
+  width: 100px;
+  height: 100px;
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+}
+
+.piece_1 {
+ 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  left: -18px;
+  opacity: 1;
+  width: 145px;
+  height: 100px;
+  cursor: grab;
+
+  
+}
+
+.piece_2 {
+  width: 100px;
+  height: 100px;
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+}
+
+.piece_3 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 127px;
+  height: 100px;
+  position: relative;
+  left: -19px;
+}
+
+.piece_4 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 125px;
+  top: -41px;
+  position: relative;
+  height: 157px;
+}
+
+.piece_5 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 105px;
+  top: -22px;
+  left: 3px;
+  position: relative;
+  height: 121px;
+}
+
+.piece_6 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+
+  
+  width: 117px;
+  position: relative;
+  height: 160px;
+  top: -31px;
+  left: -15px;
+}
+
+.piece_7 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 117px;
+  left: -14px;
+  top: -26px;
+  height: 126px;
+  position: relative;
+}
+
+.piece_8 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 125px;
+  top: -25px;
+  position: relative;
+  height: 125px;
+}
+
+.piece_9 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 120px;
+  left: -4px;
+  top: -23px;
+  position: relative;
+  height: 121px;
+}
+
+.piece_10 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 145px;
+  top: -17px;
+  left: -18px;
+  position: relative;
+  height: 126px;
+}
+
+.piece_11 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+
+  
+  width: 111px;
+  position: relative;
+  top: -26px;
+  height: 123px;
+}
+
+.spot_0{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_1{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_2{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_3{
+  width: 180px;
+  height: 145px;
+}
+
+.spot_4{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_5{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_6{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_7{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_8{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_9{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_10{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_11{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.title{
+  position: relative;
+  top: 53px;
+}
+
+.image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -50px;
+  top: -56px;
+}

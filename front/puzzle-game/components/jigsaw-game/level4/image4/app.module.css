@@ -1,0 +1,437 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(6, 94px);
+  grid-template-rows: repeat(4, 94px);
+  margin-top: 60px;
+}
+
+
+
+.piece_0 {
+  width: 150px;
+  left: -9px;
+  position: relative;
+  height: 129px;
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+}
+
+.piece_1 {
+ 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 167px;
+  left: -4px;
+  top: 0px;
+  height: 130px;
+  cursor: grab;
+
+  
+}
+
+.piece_2 {
+  width: 142px;
+  position: relative;
+  height: 129px;
+  left: 8px;
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+}
+
+.piece_3 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 159px;
+  height: 129px;
+  position: relative;
+  left: 11px;
+}
+
+.piece_4 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 130px;
+  left: 50px;
+  top: 0px;
+  position: relative;
+  height: 130px;
+}
+
+.piece_5 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 209px;
+  top: 0px;
+  left: 12px;
+  position: relative;
+  height: 130px;
+}
+
+.piece_6 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 131px;
+  position: relative;
+  height: 135px;
+  top: 11px;
+  left: 2px;
+}
+
+.piece_7 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 130px;
+  left: 15px;
+  top: 3px;
+  height: 126px;
+  position: relative;
+}
+
+.piece_8 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 150px;
+  top: 12px;
+  left: 5px;
+  position: relative;
+  height: 131px;
+}
+
+.piece_9 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 154px;
+  left: 15px;
+  top: -3px;
+  position: relative;
+  height: 137px;
+}
+
+.piece_10 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 144px;
+  top: 13px;
+  left: 32px;
+  position: relative;
+  height: 105px;
+}
+
+.piece_11 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 127px;
+  position: relative;
+  top: 13px;
+  left: 40px;
+  height: 127px;
+}
+
+.piece_12 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 127px;
+  position: relative;
+  top: 15px;
+  left: 3px;
+  height: 150px;
+}
+
+.piece_13 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 137px;
+  position: relative;
+  top: 2px;
+  left: 0px;
+  height: 129px;
+}
+
+.piece_14 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 150px;
+  position: relative;
+  top: 10px;
+  left: 6px;
+  height: 136px;
+}
+
+.piece_15 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 136px;
+  position: relative;
+  top: -1px;
+  left: 36px;
+  height: 131px;
+}
+
+.piece_16 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 134px;
+  position: relative;
+  top: 0px;
+  left: 49px;
+  height: 151px;
+}
+
+.piece_17 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 123px;
+  position: relative;
+  top: 23px;
+  left: 54px;
+  height: 128px;
+}
+
+.piece_18 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 129px;
+  position: relative;
+  top: 35px;
+  left: 4px;
+  height: 111px;
+}
+
+.piece_19 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 163px;
+  position: relative;
+  top: 14px;
+  left: -1px;
+  height: 129px;
+}
+
+.piece_20 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 117px;
+  position: relative;
+  top: 13px;
+  left: 22px;
+  height: 127px;
+}
+
+.piece_21 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 129px;
+  position: relative;
+  top: 14px;
+  left: 15px;
+  height: 125px;
+}
+
+.piece_22 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 159px;
+  position: relative;
+  top: 35px;
+  left: 13px;
+  height: 107px;
+}
+.piece_23 {
+  background-size: contain; /* Cambia 'cover' por 'contain' */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen de fondo */
+  cursor: grab;
+  width: 130px;
+  position: relative;
+  top: 25px;
+  left: 40px;
+  height: 125px;
+}
+
+
+
+.spot_0{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_1{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_2{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_3{
+  width: 180px;
+  height: 145px;
+}
+
+.spot_4{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_5{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_6{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_7{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_8{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_9{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_10{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_11{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_12{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_13{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_14{
+  width: 100px;
+  height: 100px;
+}
+
+.spot_15{
+  width: 100px;
+  height: 100px;
+}
+.spot_16{
+  width: 100px;
+  height: 100px;
+}
+.spot_17{
+  width: 100px;
+  height: 100px;
+}
+.spot_18{
+  width: 100px;
+  height: 100px;
+}
+.spot_19{
+  width: 100px;
+  height: 100px;
+}
+.spot_20{
+  width: 100px;
+  height: 100px;
+}
+.spot_21{
+  width: 100px;
+  height: 100px;
+}
+.spot_22{
+  width: 100px;
+  height: 100px;
+}
+.spot_23{
+  width: 100px;
+  height: 100px;
+}
+.spot_24{
+  width: 100px;
+  height: 100px;
+}
+.title{
+  position: relative;
+  top: 53px;
+}
+
+.image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 33px;
+  top: -66px;
+}
