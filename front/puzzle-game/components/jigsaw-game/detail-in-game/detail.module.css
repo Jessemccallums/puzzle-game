@@ -1,16 +1,15 @@
 .detail{
-   
-  background-color: #282c34;
+  background-image: url(/skybg.svg);
 }
 
 
 .linkback{
   font-family: 'Lexend', sans-serif;
-  border: 4px solid #ffffff;
+  border: 4px solid black;
   width: 8%;
   margin: auto;
   border-radius: 19px;
-  color: #ffffff;
+  color: black;
   font-size: 50px;
   }
 

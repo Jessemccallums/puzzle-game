@@ -26,10 +26,12 @@
 .h1{
     text-align: center;
     font-family: 'Lexend', sans-serif;
+    color: black;
 }
 
 .h2{
     text-align: center;
+    color: black;
     font-family: 'Lexend', sans-serif;
 }
 
@@ -41,6 +43,8 @@
     background-color: #f8ebf5;
     font-family: 'Lexend', sans-serif;
     transition: font-size 0.3s ease;
+    color: black;
+
 
 }
 

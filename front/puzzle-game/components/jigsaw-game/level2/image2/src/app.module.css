@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -233,6 +232,7 @@
 
 .title{
   position: relative;
+  color: black;
   top: 53px;
 }
 

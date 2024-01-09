@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -425,6 +424,7 @@
 .title{
   position: relative;
   top: 53px;
+  color: black;
 }
 
 .image{
