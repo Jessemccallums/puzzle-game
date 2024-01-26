@@ -78,8 +78,14 @@ const Puzzle = ({ pieces }) => {
       setPieceInSpot(initialPieceLocations.slice()); // Restaura las piezas a sus ubicaciones originales
     }
   };
-
+  const resetbtn = {
+    "position": "relative",
+    "top": "15px",
+    "padding": "10px",
+    "backgroundColor": "dimgrey",
+  }
   return (
+    <>
     <div className={styles.puzzle}>
       {puzzleComplete ? (
         <>
@@ -110,8 +116,9 @@ const Puzzle = ({ pieces }) => {
           ))}
         </>
       )}
-      <button onClick={handleResetGame} className={styles.resetButton}>Resetear Juego</button>
     </div>
+      <button onClick={handleResetGame} style={resetbtn}>Reset puzzle</button>
+      </>
   );
 };
 

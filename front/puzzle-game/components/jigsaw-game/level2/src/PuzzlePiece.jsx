@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import styles from './app.module.css';
-
 
 const PuzzlePiece = ({ id, imageUrl }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -16,13 +14,14 @@ const PuzzlePiece = ({ id, imageUrl }) => {
   const pieceStyle = {
     backgroundImage: `url(${imageUrl})`,
     opacity: isDragging ? 0.5 : 1,
-    cursor: 'grab'
+    cursor: 'grab',
   };
+
+ 
+
   const pieceClassName = `piece_${id}`;
-  return (
-    <div ref={drag} className={styles[pieceClassName]} style={pieceStyle} />
-  );
+
+  return <div ref={drag} className={styles[pieceClassName]} style={pieceStyle} />;
 };
 
 export default PuzzlePiece;
-

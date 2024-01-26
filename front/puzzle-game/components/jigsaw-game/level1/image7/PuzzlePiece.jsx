@@ -17,6 +17,8 @@ const PuzzlePiece = ({ id, imageUrl }) => {
     cursor: 'grab',
   };
 
+ 
+
   const pieceClassName = `piece_${id}`;
 
   return <div ref={drag} className={styles[pieceClassName]} style={pieceStyle} />;
