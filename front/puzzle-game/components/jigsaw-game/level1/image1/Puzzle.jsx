@@ -21,6 +21,13 @@ const Puzzle = ({ pieces }) => {
   const [randomPositions, setRandomPositions] = useState([]);
   const [placedPieces, setPlacedPieces] = useState(Array(pieces.length).fill(false));
 
+  const handleResetGame = () => {
+    setPieceInSpot(Array(pieces.length).fill(null)); // Resetea las posiciones de las piezas
+    setPlacedPieces(Array(pieces.length).fill(false)); // Resetea las piezas colocadas
+    setPuzzleComplete(false); // Establece que el rompecabezas no está completo
+    setRandomPositions(shuffleArray([...Array(pieces.length).keys()])); // Mezcla las piezas nuevamente
+  };
+
   useEffect(() => {
     let positions = Array.from({ length: pieces.length }, (_, i) => i);
     positions.sort(() => Math.random() - 0.5);
@@ -36,21 +43,35 @@ const Puzzle = ({ pieces }) => {
     const isPuzzleComplete = pieceInSpot.every((piece, spotId) => piece === spotId);
     setPuzzleComplete(isPuzzleComplete);
   }, [pieceInSpot]);
-  
+
   const handleDrop = (spotId, pieceId) => {
-    setPieceInSpot(prev => prev.map((piece, index) => index === spotId ? pieceId : piece));
+    // Actualizar el estado para reflejar que la pieza ahora ocupa un nuevo spot
+    setPieceInSpot(prev => {
+      const newPieceInSpot = [...prev];
+      // Buscar y limpiar la posición anterior de la pieza
+      const prevSpotIndex = newPieceInSpot.findIndex(p => p === pieceId);
+      if (prevSpotIndex !== -1) newPieceInSpot[prevSpotIndex] = null;
+      // Asignar la pieza al nuevo spot
+      newPieceInSpot[spotId] = pieceId;
+      return newPieceInSpot;
+    });
+  
+    // Actualizar el estado para indicar que la pieza ha sido colocada
     setPlacedPieces(prev => prev.map((placed, index) => index === pieceId ? true : placed));
   };
+  
 
-  const handlePieceRemoved = (pieceId) => {
-    if (!puzzleComplete) { // Solo permite quitar piezas si el rompecabezas no está completo
-      setPieceInSpot((prev) => {
-        const newPieceInSpot = [...prev];
-        newPieceInSpot[pieceId] = null;
-        return newPieceInSpot;
-      });
-    }
-  };
+ const handlePieceRemoved = (pieceId) => {
+  if (!puzzleComplete) {
+    setPieceInSpot(prev => {
+      const newPieceInSpot = [...prev];
+      const spotIndex = newPieceInSpot.findIndex(p => p === pieceId);
+      if (spotIndex !== -1) newPieceInSpot[spotIndex] = null;
+      return newPieceInSpot;
+    });
+  }
+};
+
 
   const handleResetPieces = () => {
     if (!puzzleComplete) { // Solo permite resetear las piezas si el rompecabezas no está completo
@@ -84,11 +105,12 @@ const Puzzle = ({ pieces }) => {
                 key={index}
                 id={pieceId}
                 imageUrl={pieces[pieceId]}
-              />
+                />
             )
           ))}
         </>
       )}
+      <button onClick={handleResetGame} className={styles.resetButton}>Resetear Juego</button>
     </div>
   );
 };

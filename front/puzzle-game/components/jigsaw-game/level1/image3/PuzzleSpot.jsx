@@ -1,32 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDrop } from 'react-dnd';
 import PuzzlePiece from './PuzzlePiece';
 import styles from './app.module.css';
 
-const PuzzleSpot = ({ id, onDropPiece, pieceId, pieces }) => {
+const PuzzleSpot = ({ id, onDropPiece, pieceId, pieces, puzzleComplete }) => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'piece',
     drop: (item) => {
-      if (item.id === id) {
+      if (!puzzleComplete) {
         onDropPiece(id, item.id);
       }
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
-    canDrop: (item) => item.id === id,
   }));
 
   const spotStyle = {
     width: '100px',
     height: '100px',
+    backgroundColor: isOver ? 'lightblue' : 'transparent',
   };
 
-  const spotClassName = `spot_${id}`;
-
   return (
-    <div ref={drop} className={styles[spotClassName]} style={spotStyle}>
-      {pieceId !== null && <PuzzlePiece id={pieceId} imageUrl={pieces[pieceId]} />}
+    <div ref={drop} className={styles[`spot_${id}`]} style={spotStyle}>
+      {pieceId !== null && (
+        <PuzzlePiece
+          id={pieceId}
+          imageUrl={pieces[pieceId]}
+          draggable={!puzzleComplete} 
+          onRemovePiece={() => setOccupied(false)}// Deshabilita el arrastre si está ocupado o el rompecabezas está completo
+        
+        />
+      )}
     </div>
   );
 };
